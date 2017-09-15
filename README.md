@@ -1,18 +1,24 @@
-Project RFlat
+# Project shiny-octo-dollop
 
 This is the download server for acquiring new content.
 
-Stack 
-Nodejs	- http for clients
-	- time management for downloads
-	- manage downloads
-	- move completed downloads
+##Contributing
+If you want to contribute you must clone, branch, **pull**.
 
-Plex 	- server all that fresh new content
+##Stack 
+###Nodejs	
+- http for clients
+- time management for downloads
+- manage downloads
+- move completed downloads
 
-Deluge	- download manager
+###Plex
+- server all that fresh new content
 
-Cli
+###Deluge
+- download manager
+
+##Cli
 - start
 - stats
 - other admin things
