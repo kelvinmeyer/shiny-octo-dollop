@@ -2,8 +2,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const hbs = require('express-handlebars');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.engine('handlebars', hbs());
+app.set('view engine','handlebars');
 
 var downloads = require('./routes/download');
 
@@ -18,7 +22,7 @@ var downloads = require('./routes/download');
 //	status(get)	/downloads/id
 //
 app.get('/', function(req,res){
-	res.send('Hello, World!');
+	res.render('index', {downloads:[{name: 'rick and morty'},{name: 'dnd'}]});
 });
 
 app.use('/downloads', downloads);

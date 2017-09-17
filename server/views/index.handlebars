@@ -17,7 +17,9 @@
 		</nav>
 		<div class="container">
 			<div class="container col-md-8">
-				The list goes here
+				{{#each downloads}}
+				<h4>{{name}}</h4>
+				{{/each}}
 			</div>
 			<div class="container col-md-4">
 				<h3>Add download</h3>
