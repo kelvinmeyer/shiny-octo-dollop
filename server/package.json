@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kelvinmeyer/shiny-octo-dollop#readme",
   "dependencies": {
+    "body-parser": "^1.18.1",
     "express": "^4.15.4"
   }
 }
