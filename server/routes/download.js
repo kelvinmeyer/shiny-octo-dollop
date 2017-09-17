@@ -15,7 +15,9 @@ var router = express.Router();
 //	status(get)	/downloads/id
 
 var create = function newDownload(req,res){
-	res.send(req.body);
+
+	res.status(201).send('create new');
+
 }
 
 var startAll = function enableAllDownloads(req,res){

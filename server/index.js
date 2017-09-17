@@ -23,6 +23,8 @@ app.get('/', function(req,res){
 
 app.use('/downloads', downloads);
 
-app.listen(3000, function() {
+var s = app.listen(3000, function() {
 	console.log('We are running on port 3000');
 });
+
+module.exports = s;
