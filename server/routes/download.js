@@ -2,6 +2,15 @@
 var express = require('express');
 var router = express.Router();
 
+const deluge = require('deluge')("http://localhost:8112/json", "deluge");
+var callback = 
+function callback(error, result) {
+	if(error) {
+		console.error(error);
+		return;
+	}
+}
+
 // routes
 // ------
 // downloads (rest style)
@@ -15,8 +24,9 @@ var router = express.Router();
 //	status(get)	/downloads/id
 
 var create = function newDownload(req,res){
-
-	res.status(201).send('create new');
+	deluge.add(req.body.magnet,"~/Downloads/",callback)	
+	//res.status(201).send(req.body);
+	res.redirect("/")
 
 }
 
