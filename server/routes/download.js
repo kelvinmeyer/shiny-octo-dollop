@@ -17,6 +17,7 @@ var router = express.Router();
 var create = function newDownload(req,res){
 
 	res.status(201).send('create new');
+
 }
 
 var startAll = function enableAllDownloads(req,res){
@@ -50,7 +51,6 @@ var statusAll = function aStatus(req,res){
 router.post('/', create);
 router.patch('/', startAll);
 router.patch('/:id/', start);
-router.patch('/', pauseAll);
 router.patch('/:id/', pause);
 router.delete('/:id', stop);
 router.get('/', status);
