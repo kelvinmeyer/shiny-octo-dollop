@@ -3,7 +3,8 @@
 This is the download server for acquiring new content.
 
 ## Contributing
-If you want to contribute you must clone, branch, **pull**.
+If you want to contribute you must fork and then create a **pull request**.
+Or ask and i'll add you as a contributor, then follow the branch then **pull** strategy.
 
 ## Stack 
 ### Nodejs	
@@ -18,11 +19,12 @@ If you want to contribute you must clone, branch, **pull**.
 ### Deluge
 - download manager
 
-## Cli
+## UI
+### Command line
 - start
 - stats
 - other admin things
 
-web (for the common folk)
+### web (for the common folk)
 - current things / stats
 - add new download
