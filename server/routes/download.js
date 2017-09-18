@@ -25,7 +25,6 @@ function callback(error, result) {
 
 var create = function newDownload(req,res){
 	deluge.add(req.body.magnet,"~/Downloads/",callback);
-	res.status(201);//.send(req.body);
 	res.redirect("/");
 
 }
