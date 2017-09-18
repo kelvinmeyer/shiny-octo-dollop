@@ -2,7 +2,7 @@ language: node_js
 node_js:
         - "stable"
 before_install:
-        - sudo apt-get install deluged
+        - sudo apt-get install deluged deluge-web
         - deluged &
         - cd server/
 install:
