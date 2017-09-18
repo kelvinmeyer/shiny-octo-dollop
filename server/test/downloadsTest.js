@@ -31,13 +31,6 @@ describe('downloads controller', function(){
 				.expect(200, done);
 		});
 	});
-	describe('GET /downloads', function(){
-		it('should return OK', function(done){
-			request(server)
-				.get('/downloads')
-				.expect(200, done);
-		});
-	});
 	describe('GET /downloads/id', function(){
 		it('should return OK', function(done){
 			request(server)
