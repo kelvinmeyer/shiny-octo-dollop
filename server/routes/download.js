@@ -30,6 +30,7 @@ var create = function newDownload(req,res){
 }
 
 var startAll = function enableAllDownloads(req,res){
+	console.log(req.body.state);
 	res.send('all units we are go');
 }
 
@@ -50,6 +51,7 @@ var stop = function removeDownload(req,res){
 }
 
 var stat = function allStatus(req,res){
+	console.log("hello world");
 	res.send(deluge.getTorrentRecord(callback));
 }
 
