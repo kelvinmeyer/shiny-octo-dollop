@@ -1,14 +1,18 @@
 'use strict';
 var express = require('express');
 var router = express.Router();
-
-const deluge = require('deluge')("http://localhost:8112/json", "deluge");
+var resultString
+var deluge = require('deluge')("http://localhost:8112/json", "deluge");
 var callback = 
 function callback(error, result) {
 	if(error) {
 		console.error(error);
 		return;
 	}
+<<<<<<< HEAD
+=======
+	resultString = result;
+>>>>>>> master
 	console.log(result);
 	return;
 }
@@ -52,12 +56,17 @@ var stop = function removeDownload(req,res){
 }
 
 var stat = function allStatus(req,res){
+<<<<<<< HEAD
 	deluge.getTorrentRecord(function (error, result){
 		if(error) {
 			console.error(error);
 		}
 		res.send(result);
 	});
+=======
+	deluge.getTorrentRecord(callback);
+	res.send(resultString);
+>>>>>>> master
 }
 
 var statusAll = function aStatus(req,res){
