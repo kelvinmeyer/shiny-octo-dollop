@@ -3,7 +3,7 @@ node_js:
         - "stable"
 before_install:
         - sudo apt-get install deluged
-        - sudo systemctl start deluged
+        - deluged &
         - cd server/
 install:
         - npm install
