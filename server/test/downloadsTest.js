@@ -7,7 +7,7 @@ describe('downloads controller', function(){
 		it('should return CREATED', function(done){
 			request(server)
 				.post('/downloads')
-				.expect(201, done);
+				.expect(302, done);
 		});
 	});
 	describe('PATCH /downloads', function(){
