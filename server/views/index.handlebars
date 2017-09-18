@@ -16,8 +16,8 @@
 				<input type="hidden" value="true" name="state">
 				<button type="button" class="btn btn-outline-primary">Resume All</button>
 			</form>
-			<form class="form-inline" action="http://localhost:3000/downloads" method="post">
-				<input class="form-control mr-sm-2" type="text" placeholder="Magnet Link" >
+			<form  id="downloadForm" class="form-inline" action="http://localhost:3000/downloads" method="post">
+				<input id="magnet" name="magnet" class="form-control mr-sm-2" type="text" placeholder="Magnet Link" >
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
 			</form>
 		</nav>
