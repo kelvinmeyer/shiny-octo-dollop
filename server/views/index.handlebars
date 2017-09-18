@@ -11,25 +11,16 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-dark bg-dark">
-			<div class="container">
-				<a class="navbar-brand" href="#">Navbar</a>
-			</div>
+			<a class="navbar-brand" href="#">Navbar</a>
+			<form class="form-inline" action="http://localhost:3000/downloads" method="post">
+				<input class="form-control mr-sm-2" type="text" placeholder="Magnet Link" >
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
+			</form>
 		</nav>
 		<div class="container">
-			<div class="container col-md-8">
-				{{#each downloads}}
-				<h4>{{name}}</h4>
-				{{/each}}
-			</div>
-			<div class="container col-md-4">
-				<h3>Add download</h3>
-				<form id="downloadForm" action="http://localhost:3000/downloads" method="post">
-					<label for="magnet">Magnet Link</label>
-					<input type="text" id="magnet" name="magnet">
-					</br></br>
-					<button type="submit" class="btn btn-primary">Add</button>
-				</form>
-			</div>
+			{{#each downloads}}
+			<h4>{{name}}</h4>
+			{{/each}}
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
