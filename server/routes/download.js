@@ -9,6 +9,8 @@ function callback(error, result) {
 		console.error(error);
 		return;
 	}
+	console.log(result);
+	return;
 }
 
 // routes
@@ -50,7 +52,7 @@ var stop = function removeDownload(req,res){
 }
 
 var stat = function allStatus(req,res){
-	res.send(deluge.getTorrentRecord(callback));
+	deluge.getTorrentRecord(callback);
 }
 
 var statusAll = function aStatus(req,res){
