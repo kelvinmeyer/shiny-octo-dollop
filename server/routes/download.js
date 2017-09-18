@@ -24,9 +24,8 @@ function callback(error, result) {
 //	status(get)	/downloads/id
 
 var create = function newDownload(req,res){
-	deluge.add(req.body.magnet,"~/Downloads/",callback)	
-	//res.status(201).send(req.body);
-	res.redirect("/")
+	deluge.add(req.body.magnet,"~/Downloads/",callback);
+	res.redirect("/");
 
 }
 
@@ -50,8 +49,8 @@ var stop = function removeDownload(req,res){
 	res.send('kil it with fire');
 }
 
-var status = function allStatus(req,res){
-	res.send('here you go command');
+var stat = function allStatus(req,res){
+	res.send(deluge.getTorrentRecord(callback));
 }
 
 var statusAll = function aStatus(req,res){
@@ -63,7 +62,7 @@ router.patch('/', startAll);
 router.patch('/:id/', start);
 router.patch('/:id/', pause);
 router.delete('/:id', stop);
-router.get('/', status);
+router.get('/', stat);
 router.get('/:id/', statusAll);
 
 module.exports = router;
