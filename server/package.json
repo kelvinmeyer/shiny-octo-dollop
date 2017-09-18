@@ -19,7 +19,7 @@
   "dependencies": {
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
     "deluge": "^1.7.1"
   },
   "devDependencies": {
