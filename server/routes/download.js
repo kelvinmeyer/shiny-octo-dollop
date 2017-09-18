@@ -52,7 +52,12 @@ var stop = function removeDownload(req,res){
 }
 
 var stat = function allStatus(req,res){
-	deluge.getTorrentRecord(callback);
+	deluge.getTorrentRecord(function (error, result){
+		if(error) {
+			console.error(error);
+		}
+		res.send(result);
+	});
 }
 
 var statusAll = function aStatus(req,res){
