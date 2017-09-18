@@ -50,6 +50,7 @@ var stop = function removeDownload(req,res){
 }
 
 var stat = function allStatus(req,res){
+	console.log("hello world");
 	res.send(deluge.getTorrentRecord(callback));
 }
 
