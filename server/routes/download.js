@@ -9,12 +9,7 @@ function callback(error, result) {
 		console.error(error);
 		return;
 	}
-<<<<<<< HEAD
-=======
-	resultString = result;
->>>>>>> master
 	console.log(result);
-	return;
 }
 
 // routes
@@ -57,7 +52,6 @@ var stop = function removeDownload(req,res){
 }
 
 var stat = function allStatus(req,res){
-<<<<<<< HEAD
 	deluge.getTorrentRecord(function (error, result){
 		if(error) {
 			console.error(error);
