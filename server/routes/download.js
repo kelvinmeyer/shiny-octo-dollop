@@ -25,8 +25,13 @@ function callback(error, result) {
 //	status(get)	/downloads/id
 
 var create = function newDownload(req,res){
-	deluge.add(req.body.magnet,"~/Downloads/",callback);
-	res.redirect("/");
+	deluge.add(req.body.magnet,"~/Downloads/",function(error, result){
+		if(error){
+			console.error(error);
+			return;
+		}
+		res.redirect("/");
+	});
 
 }
 
